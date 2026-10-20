@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thư chúc mừng 20/10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="petals" aria-hidden="true"></canvas>
+<audio id="bgm" src="nhac-nen.mp3" loop preload="auto"></audio>
+<button class="music" id="music" type="button" aria-pressed="false">Bật nhạc</button>
+
+<!-- Màn hình 1: lá thư đang tải -->
+<main class="scene" id="scene">
+  <div class="envelope" id="envelope">
+    <div class="env-back"></div>
+    <div class="letter"></div>
+    <div class="env-front"></div>
+    <div class="flap"></div>
+    <button class="seal" id="seal" disabled aria-label="Mở thư">20/10</button>
+  </div>
+  <p id="status" role="status">Đang gói lời chúc…</p>
+  <div class="bar" aria-hidden="true"><span id="fill"></span></div>
+</main>
+
+<!-- Màn hình 2: lời chúc -->
+<section class="card-wrap" id="wrap" aria-live="polite">
+  <article class="card" id="card">
+    <h1>Chúc mừng ngày 20/10</h1>
+    <p class="to" id="greet"></p>
+    <div class="msg" id="msg"></div>
+    <p class="sign" id="sign"></p>
+    <button class="again" id="again" type="button">Đọc lại thư</button>
+  </article>
+  <p class="hint">Chạm vào màn hình để hoa nở</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
